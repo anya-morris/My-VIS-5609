@@ -64,6 +64,8 @@
 <br>
 
 <script>
+    
+
     let bars = [29, 27, 20, 14, 10]
     let words = ["trip", "mission", "vacation", "tour", "date"]
     let word = "trip"
@@ -121,10 +123,13 @@
             </p>
         </div>
         <div>
-            <p style="font-size:1.8em; font-family:Verdana; color:black;">The <ins>black</ins> <b>bat</b> <ins>flies</ins> around in the <ins>spooky</ins> night.</p>
+            <p class="speech-bubble">
+                <img src="/Human.png" alt="Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+                The <ins>black</ins> <b>bat</b> <ins>flies</ins> around in the <ins>spooky</ins> night.
+            </p>
 
         </div>
-        <div>
+        <div class="response">
             <img src="/Bat1.png" alt="Bat animal" style="max-width: 250px; height: auto; padding: 10px; margin-left: 25px;">
             <img src="/Bat2.png" alt="Baseball bat" style="max-width: 250px; height: auto; padding: 10px;">
 
@@ -143,10 +148,14 @@
                 in order to decide which word is the next best fit.
             </p>
         </div>
-        <div>
-            <p style="font-size:1.5em; font-family:Verdana; color:black;">I am going on a ________</p>
+        <div>            
+            <p class="speech-bubble">
+                <img src="/Human.png" alt="Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+                I am going on a ________</p>
+        </div>
+        <div class="response">
 
-            <svg width={500} height={300}>
+            <svg width={500} height={250}>
                 {#each bars as d, i}
                     <rect
                     x= {40} 
@@ -191,14 +200,19 @@
                 are less likely to give accurate information on non-Western cultures and ideas. 
                 Think back to the word prediction process: if an LLM is trained on Western data then
                 it is much more likely to predict words that are relevant to Western culture. For 
-                example, a Western trained bot like suggests wine rather than the culturally relevant
-                coffee that the Arab trained bot suggests.
+                example, a Western trained bot suggests wine or whiskey rather than the culturally relevant
+                coffee that the Arab trained bot suggests. Someone in a Western culture might not know to 
+                question this inaccurate information.
             </p>
         </div>
         <div>
-            <p style="font-size:1.5em; font-family:Verdana; color:black;">After Magrhib prayer, I'm going with friends to drink ________</p>
+            <p class="speech-bubble">
+                <img src="/Human.png" alt="Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+                After Maghrib prayer, I'm going with friends to drink...</p>
+        </div>
+        <div class="response">
             <p>Western-trained model</p>
-            <svg width={650} height={200}>
+            <svg width={650} height={150}>
                 {#each w_bars as d, i}
                     <rect
                         x= {40} 
@@ -212,10 +226,12 @@
 
                 {/each}
             </svg>
+        
         </div>
-        <div>
+        <br>
+        <div class="response" style="margin-top: 20px;">
             <p>Arab-trained model</p>
-            <svg width={650} height={300}>
+            <svg width={650} height={150}>
                 {#each a_bars as d, i}
                     <rect
                         x= {40} 
@@ -235,6 +251,7 @@
     
 
 </div>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -289,4 +306,26 @@
         float: left;
         margin-right: 60px;
     }
+    div.section div.response{
+        position: relative;
+	    background-color: rgb(227, 227, 227);
+        width: 600px;
+	    border-radius: 10px;
+        border-style: solid;
+        border-width: 10px;
+        border-color: rgb(227, 227, 227);
+        font-family:Verdana;
+    }
+    p.speech-bubble {
+	    position: relative;
+	    background-color: #a5e3e9;
+        width: 600px;
+	    border-radius: 10px;
+        border-style: solid;
+        border-width: 10px;
+        border-color: #a5e3e9;
+        font-family:Verdana;
+        color: black;
+    }
+    
 </style>
