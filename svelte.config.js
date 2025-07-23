@@ -7,7 +7,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : '/MY-VIS-5609'
+			base: process.argv.includes('dev') ? '' : '/My-VIS-5609'
 		}
 	}
 };

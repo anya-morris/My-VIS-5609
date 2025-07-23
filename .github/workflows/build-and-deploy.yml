@@ -24,7 +24,7 @@ jobs:
 
       - name: build
         env:
-           BASE_PATH: '/MY-VIS-5609'
+           BASE_PATH: '/My-VIS-5609'
         run: npm run build
 
       - name: Upload Artifacts
