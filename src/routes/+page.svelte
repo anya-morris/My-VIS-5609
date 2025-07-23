@@ -15,10 +15,12 @@
             how they are limited.
         </p>
     
-
-
+    </div>
+    <div>
+        <img src="/UsageChart.png" alt="Usage Chart" style="max-width: 350px; height: auto; margin-left: 70px;">
+    </div>
     <br>
-    
+    <div>
     <p><b>Do you like using LLMs?</b></p>
     <input type="radio" id="yes" name="likeLLMs" value="Yes">
     <label for="yes">Yes</label><br>
@@ -26,6 +28,18 @@
     <label for="sometimes">Sometimes</label><br>
     <input type="radio" id="no" name="likeLLMs" value="No">
     <label for="no">No</label><br>
+
+    <p><b>How often do you use LLMs?</b></p>
+    <input type="radio" id="never" name="useLLMs" value="Never">
+    <label for="never">Never</label><br>
+    <input type="radio" id="Month" name="useLLMs" value="Month">
+    <label for="Month">Once a month</label><br>
+    <input type="radio" id="week" name="useLLMs" value="Once a week">
+    <label for="week">Once a week</label><br>
+    <input type="radio" id="multWeek" name="useLLMs" value="Multiple a week">
+    <label for="multWeek">Multiple times a week</label><br>
+    <input type="radio" id="day" name="useLLMs" value="Every day">
+    <label for="day">Every day</label><br>
 
     <p><b>What do you like about LLMs?</b></p>
     <input type="checkbox" id="fun" name="positives" value="Fun to use">
@@ -85,13 +99,15 @@
                 LLMs are trained on a massive amount of data. Meta's Llama, for example, is trained on
                 15 trillion tokens which is equivalent to about 11 trillion English words. Processing
                 11 trillion words is about the same as reading <i>War and Peace</i> 19 million times. 
-                That would take the average reader 68,300 years! That's a lot of words. Similarly, 
+                <i>War and Peace</i> is 2 inches thick, so stacking it on top of itself 19 million 
+                could make it to the International Space Station 2.4 times. That's a lot of words! Similarly, 
                 ChatGPT-4 is trained with about 1.8 trillion parameters. Parameters are used to make 
                 connections between words.
             </p>
         </div>
         <div>
-            <img src="/WP_Vis.gif" alt="WP Vis" style="max-width: 350px; height: auto; margin-left: 70px;">
+            <img src="/WP_Vis.gif" alt="WP Vis" style="max-width: 350px; height: auto; margin-left: 20px;">
+            <img src="/WP_Visual2.png" alt="WP Vis2" style="max-width: 200px; height: auto; margin-left: 30px;">
         </div>
     </div>
 
@@ -101,11 +117,16 @@
             <p>
                 The amount of training data is not the only thing that makes LLMs unique. LLMs are a 
                 type of Generative AI. This means they produce content like words or images. In contrast,
-                other AI models may use data to classify images or make predictions. The output of those
-                models only take form.
+                other AI models may use data to classify images or make predictions. Instead of text of images, 
+                the output of non-generative AI models might be a classification or number. For example, a 
+                classification model may be trained to distinguish images or dogs from images of cats.
             </p>
         </div>
 
+        <div>
+            <img src="/GenAI.png" alt="WP Vis" style="max-width: 280px; height: auto; margin-left: 20px;">
+            <img src="/ClassAI.png" alt="WP Vis2" style="max-width: 280px; height: auto; margin-left: 20px;">
+        </div>
     </div>
 
 
@@ -151,10 +172,10 @@
         <div>            
             <p class="speech-bubble">
                 <img src="/Human.png" alt="Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
-                I am going on a ________</p>
+                I am going on a...</p>
         </div>
         <div class="response">
-
+            <img src="/RobotIcon.png" alt="Robot icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
             <svg width={500} height={250}>
                 {#each bars as d, i}
                     <rect
@@ -182,7 +203,21 @@
 <br>
 <div>
     <h2>Capabilities</h2>
-    <p>Here we will discuss some of the main capabilities of LLMs</p>
+    
+    <div class="section">
+        <h3>Summarization</h3>
+        <div>
+            <p>One of LLMs' most effective capabilities is text summarization. This makes
+                sense given what we now know about word predictions. It's much easier to 
+                predict the next most likely word when all the words are provided to the 
+                LLM through the piece that you want summarized. LLMs use two different 
+                summarization techniques. Either they extract sentences directly from the text 
+                or they create an abstract summary with their own creativity. Usually these
+                techniques are combined for the best results, but both use statistics to 
+                predict words. 
+            </p>
+        </div>
+    </div>
 </div>
 <br>
 <br>
@@ -207,11 +242,13 @@
         </div>
         <div>
             <p class="speech-bubble">
-                <img src="/Human.png" alt="Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
-                After Maghrib prayer, I'm going with friends to drink...</p>
+                <img src="/ArabAvatar.png" alt="Arab Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+                After Maghrib prayer, I'm going with friends to drink...
+            </p>
         </div>
         <div class="response">
             <p>Western-trained model</p>
+            <img src="/RobotIcon.png" alt="Robot icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
             <svg width={650} height={150}>
                 {#each w_bars as d, i}
                     <rect
@@ -219,7 +256,7 @@
                         y={(i+1)*35} 
                         height={30} 
                         width={10*d} 
-                        fill="steelblue" 
+                        fill="firebrick" 
                     />
             
                     <text fill="#ffffff" font-size="12" font-family="Verdana" x="50" y={55 + (i*35)}>{d}%:  {w_words[i]}</text>     
@@ -231,6 +268,7 @@
         <br>
         <div class="response" style="margin-top: 20px;">
             <p>Arab-trained model</p>
+            <img src="/RobotIcon.png" alt="Robot icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
             <svg width={650} height={150}>
                 {#each a_bars as d, i}
                     <rect
@@ -238,7 +276,7 @@
                         y={(i+1)*35} 
                         height={30} 
                         width={10*d} 
-                        fill="steelblue" 
+                        fill="forestgreen" 
                     />
                     
                     <text fill="#ffffff" font-size="12" font-family="Verdana" x="50" y={55 + (i*35)}>{d}%:  {a_words[i]}</text>     
