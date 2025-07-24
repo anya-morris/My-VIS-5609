@@ -106,8 +106,8 @@
             </p>
         </div>
         <div>
-            <img src="/WP_Vis.gif" alt="WP Vis" style="max-width: 350px; height: auto; margin-left: 20px;">
-            <img src="/WP_Visual2.png" alt="WP Vis2" style="max-width: 200px; height: auto; margin-left: 30px;">
+            <img src="./WP_Vis.gif" alt="WP Vis" style="max-width: 350px; height: auto; margin-left: 20px;">
+            <img src="./WP_Visual2.png" alt="WP Vis2" style="max-width: 200px; height: auto; margin-left: 30px;">
         </div>
     </div>
 
@@ -124,8 +124,8 @@
         </div>
 
         <div>
-            <img src="/GenAI.png" alt="WP Vis" style="max-width: 280px; height: auto; margin-left: 20px;">
-            <img src="/ClassAI.png" alt="WP Vis2" style="max-width: 280px; height: auto; margin-left: 20px;">
+            <img src="./GenAI.png" alt="WP Vis" style="max-width: 280px; height: auto; margin-left: 20px;">
+            <img src="./ClassAI.png" alt="WP Vis2" style="max-width: 280px; height: auto; margin-left: 20px;">
         </div>
     </div>
 
@@ -145,14 +145,14 @@
         </div>
         <div>
             <p class="speech-bubble">
-                <img src="/Human.png" alt="Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+                <img src="./Human.png" alt="Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
                 The <ins>black</ins> <b>bat</b> <ins>flies</ins> around in the <ins>spooky</ins> night.
             </p>
 
         </div>
         <div class="response">
-            <img src="/Bat1.png" alt="Bat animal" style="max-width: 250px; height: auto; padding: 10px; margin-left: 25px;">
-            <img src="/Bat2.png" alt="Baseball bat" style="max-width: 250px; height: auto; padding: 10px;">
+            <img src="./Bat1.png" alt="Bat animal" style="max-width: 250px; height: auto; padding: 10px; margin-left: 25px;">
+            <img src="./Bat2.png" alt="Baseball bat" style="max-width: 250px; height: auto; padding: 10px;">
 
         </div>
         
@@ -171,11 +171,11 @@
         </div>
         <div>            
             <p class="speech-bubble">
-                <img src="/Human.png" alt="Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+                <img src="./Human.png" alt="Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
                 I am going on a...</p>
         </div>
         <div class="response">
-            <img src="/RobotIcon.png" alt="Robot icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+            <img src="./RobotIcon.png" alt="Robot icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
             <svg width={500} height={250}>
                 {#each bars as d, i}
                     <rect
@@ -242,13 +242,13 @@
         </div>
         <div>
             <p class="speech-bubble">
-                <img src="/ArabAvatar.png" alt="Arab Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+                <img src="./ArabAvatar.png" alt="Arab Human icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
                 After Maghrib prayer, I'm going with friends to drink...
             </p>
         </div>
         <div class="response">
             <p>Western-trained model</p>
-            <img src="/RobotIcon.png" alt="Robot icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+            <img src="./RobotIcon.png" alt="Robot icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
             <svg width={650} height={150}>
                 {#each w_bars as d, i}
                     <rect
@@ -268,7 +268,7 @@
         <br>
         <div class="response" style="margin-top: 20px;">
             <p>Arab-trained model</p>
-            <img src="/RobotIcon.png" alt="Robot icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
+            <img src="./RobotIcon.png" alt="Robot icon" style="border-radius: 3px; max-width: 30px; height: auto; float:left; margin-right: 10px;">
             <svg width={650} height={150}>
                 {#each a_bars as d, i}
                     <rect
