@@ -17,7 +17,7 @@
     
     </div>
     <div>
-        <img src="/UsageChart.png" alt="Usage Chart" style="max-width: 350px; height: auto; margin-left: 70px;">
+        <img src="./UsageChart2.png" alt="Usage Chart" style="max-width: 550px; height: auto; margin-left: 70px;">
     </div>
     <br>
     <div>
@@ -342,7 +342,7 @@
     div.section div {
         width: 45%;
         float: left;
-        margin-right: 60px;
+        margin-right: 20px;
     }
     div.section div.response{
         position: relative;
